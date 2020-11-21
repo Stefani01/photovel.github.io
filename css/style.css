@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body, a {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 0.2rem;
+}
+
+#navigacija {
+  background-color: transparent;
+}
+
+#navigacija #logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+#navigacija #meni_ul_li a {
+  color: #3d3a3d !important;
+  font-size: 1.2rem;
+}
+/*# sourceMappingURL=style.css.map */
