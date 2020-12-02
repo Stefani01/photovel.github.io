@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    -webkit-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    -webkit-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    -webkit-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f7f7f7;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+#scroll-desno {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+#scroll-levo {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#scroll-levo, #scroll-desno {
+  width: 0.9%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(#77d7e6), to(#3d3a3d));
+  background: linear-gradient(to bottom, white, #77d7e6, #3d3a3d);
+  -webkit-animation: animate 5s linear infinite;
+  animation: animate 5s linear infinite;
+}
+
+.margina {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+section {
+  height: 100vh;
+}
+
+#home {
+  background: url("../img/WhatsApp Image 2020-11-22 at 20.37.09.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1150px;
+  text-shadow: 5px 5px 20px #3d3a3d;
+  color: black;
+}
+
+#home #logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: black;
+}
+
+#home #ulMeni li a {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: black;
+}
+
+.slikaHover {
+  position: relative;
+  border: 15px double #3d3a3d;
+  height: 600px;
+}
+
+.slikaHover img {
+  width: 100%;
+}
+
+.slikaHover .box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slikaHover .box:nth-child(1) {
+  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+  clip-path: polygon(0 0, 0% 100%, 100% 0);
+}
+
+.slikaHover .box:nth-child(2) {
+  z-index: 2;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-clip-path: polygon(100% 100%, 0% 100%, 100% 0);
+  clip-path: polygon(100% 100%, 0% 100%, 100% 0);
+}
+
+.slikaHover .box:nth-child(1):hover, .box:nth-child(2):hover {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.slikaHover .box:nth-child(1):hover ~ .box:nth-child(2) {
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+}
+
+.borderNaslov {
+  width: 25%;
+  background: -webkit-gradient(linear, left top, right top, from(white), color-stop(#77d7e6), color-stop(#de34eb), to(#3d3a3d));
+  background: linear-gradient(to right, white, #77d7e6, #de34eb, #3d3a3d);
+  height: 5px;
+}
+
+#header {
+  z-index: 10;
+}
+
+.naslovIspis {
+  padding-top: 100px;
+}
+
+#logoNaslov h2 {
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  border-radius: 15px 15px 15px;
+  color: white !important;
+}
+
+#socMreze {
+  position: fixed;
+  z-index: 5;
+  right: 1.5%;
+  top: 35%;
+}
+
+#socMreze #ulSocMreze ul li {
+  background-color: #f7f7f7 !important;
+}
+
+#socMreze .list-group-item {
+  padding: .25rem 0.5rem !important;
+}
+
+#podnaslov h1 {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.boxKamera {
+  width: 20%;
+  border-radius: 10px 10px 10px;
+}
+
+.boxKamera img {
+  opacity: 1;
+}
+
+.nazivKamera {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(0, 0, 75px);
+          transform: translate3d(0, 0, 75px);
+}
+
+.boxKamera:hover .nazivKamera {
+  opacity: 1;
+}
+
+.boxKamera img {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translate3d(0, 0, 75px);
+          transform: translate3d(0, 0, 75px);
+}
+
+.teamMember {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  width: 30%;
+}
+
+.nameMember h2 {
+  opacity: 0;
+  -webkit-transform: 0.5s;
+          transform: 0.5s;
+}
+
+.teamMember .imgMember img {
+  opacity: 0.5;
+}
+
+.teamMember:hover .imgMember img {
+  opacity: 1;
+}
+
+.teamMember:hover .nameMember h2 {
+  opacity: 1;
+}
+
+.teamMember:hover {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.3)), color-stop(rgba(119, 215, 230, 0.3)), color-stop(rgba(222, 52, 235, 0.3)), to(rgba(60, 57, 60, 0.3)));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(119, 215, 230, 0.3), rgba(222, 52, 235, 0.3), rgba(60, 57, 60, 0.3));
+}
+/*# sourceMappingURL=style.css.map */
