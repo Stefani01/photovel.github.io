@@ -205,7 +205,6 @@ section{
 
 .teamMember{
     transition: 0.5s;
-    width: 30%;
 }
 
 .nameMember h2{
@@ -214,6 +213,7 @@ section{
 }
 
 .teamMember .imgMember img{
+    width: 100%;
     opacity: 0.5;
 }
 

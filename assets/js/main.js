@@ -96,18 +96,14 @@ var kamereNaziv = new Array("Canon EOS 30D", "Nikon Z7", "Sony 4K");
 var kameraDeoStrane = document.querySelector("#kamere");
 for(let i=0; i < kamereSrc.length; i++){
     var kamera = document.createElement("div");
-    kamera.classList.add("col-3","boxKamera", "shadow-lg",  "p-3", "d-flex", "align-items-center", "flex-wrap");
+    kamera.classList.add("col-md-4","boxKamera", "shadow-lg",  "p-4","m-2", "mx-auto");
 
     var kameraImg = document.createElement("img");
     kameraImg.setAttribute("src", kamereSrc[i]);
-    if(i==2){
-        kameraImg.classList.add("img-fluid", "mb-5");
-    }
     kameraImg.classList.add("img-fluid");
     kamera.appendChild(kameraImg);
-
-    var kameraIme = document.createElement("h4");
-    kameraImg.classList.add("nazivKamera", "text-center");
+    var kameraIme = document.createElement("h5");
+    kameraImg.classList.add("nazivKamera");
     kameraIme.textContent = kamereNaziv[i];
     kamera.appendChild(kameraIme);
 
@@ -123,7 +119,7 @@ var timDeoStrane = document.querySelector("#timIspis");
 for(let i=0; i < imgTimSrc.length; i++){
 
     var clanTim = document.createElement("div");
-    clanTim.classList.add("col-2", "teamMemer", "shadow-lg");
+    clanTim.classList.add("col-sm-3", "col-md-2", "teamMember", "shadow-lg");
 
     var slikaTim = document.createElement("div");
     slikaTim.classList.add("imgMember");
@@ -134,7 +130,7 @@ for(let i=0; i < imgTimSrc.length; i++){
     clanTim.appendChild(slikaTim);
 
     var imeTim = document.createElement("div");
-    imeTim.classList.add("text-center");
+    imeTim.classList.add("nameMember","text-center");
     var h2Tag = document.createElement("h2");
     h2Tag.textContent = timImena[i];
     imeTim.appendChild(h2Tag);
