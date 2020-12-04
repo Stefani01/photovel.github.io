@@ -1,16 +1,11 @@
-
-window.addEventListener("scroll", effects);
-function effects(){
-    var klaseEfekti = document.querySelectorAll(".effect");
-    for(let i=0; i < klaseEfekti.length; i++){
-        var position = klaseEfekti[i].getBoundingClientRect();
-        var screenPosition = window.innerHeight[i] / 1.3;
-        if(position < screenPosition){
-            klaseEfekti.classList.add("appear");
-        }
-    }
-}
-
+window.addEventListener("scroll", function(){
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("header").classList.add("promeniIzgled");
+      } 
+      else {
+        document.getElementById("header").classList.remove("promeniIzgled");
+      }
+})
 
 // meni
 var nazivMeni = new Array("About", "Services", "Team", "Gallery", "Contact", "Author", "Documentation");
@@ -22,11 +17,8 @@ var hrefMeni = new Array("#about", "#services","#team", "#gallery", "#contact", 
 var logoIspis = document.createElement("a");
 logoIspis.setAttribute("class", "navbar-brand");
 logoIspis.setAttribute("href", "index.html");
-// <i class="fas fa-camera-retro"></i>
-var sadrzajLogoIkonica = `<img src="https://img.icons8.com/nolan/70/compact-camera.png"/>`;
-//var sadrzajLogoText = document.createTextNode("PHOTOVEL");
+var sadrzajLogoIkonica = `<img src="https://img.icons8.com/ios-filled/40/000000/compact-camera.png"/>`;
 logoIspis.innerHTML = sadrzajLogoIkonica;
-//logoIspis.appendChild(sadrzajLogoText);
 document.querySelector("#logo").appendChild(logoIspis);
 
                 /* MENI */
@@ -44,19 +36,33 @@ for(let i=0; i<nazivMeni.length; i++){
     ulMeni.appendChild(liMeni);
 }
 
+var ulHamburger = document.createElement("ul");
+ulHamburger.classList.add("list-group", "linkovi");
+for(let i=0; i < nazivMeni.length; i++){
+    var liHamburger = document.createElement("li");
+    liHamburger.classList.add("list-group-item");
+
+    var aHamburger = document.createElement("a");
+    aHamburger.classList.add("nav-link");
+    aHamburger.href = hrefMeni[i];
+    aHamburger.textContent = nazivMeni[i];
+
+    liHamburger.appendChild(aHamburger);
+    ulHamburger.appendChild(liHamburger);
+    
+}
+document.querySelector("#meniHamburger").appendChild(ulHamburger);
+
                 /* DINAMICKI ISPIS NASLOVA */
 
 var naslovi = document.querySelectorAll(".naslovIspis");
 
 function ispisKlasaNaslova(){
-    h1Tag.classList.add("text-uppercase");
-    h1Tag.classList.add("text-center");
-    h1Tag.classList.add("display-4");
+    h1Tag.classList.add("text-uppercase", "text-center", "display-4");
 }
 
 function hrTagKlase(){
-    hrTag.classList.add("mx-auto");
-    hrTag.classList.add("borderNaslov");  
+    hrTag.classList.add("mx-auto", "borderNaslov");
 }
 
 for(let i=0; i < naslovi.length; i++){
@@ -92,49 +98,81 @@ for(let i=0; i < socMrezeIkonice.length; i++){
             /* DINAMICKI ISPIS KAMERE */
 
 var kamereSrc = new Array("assets/img/cc749ededc077309f29421d3cb727927-(1).png", "assets/img/941035643.png", "assets/img/23-video-camera-png-image.png");
-var kamereNaziv = new Array("Canon EOS 30D", "Nikon Z7", "Sony 4K");
-var kameraDeoStrane = document.querySelector("#kamere");
+var kamereNaziv = new Array("Canon EOS 600D", "Nikon Z7", "Canon XF 200");
+var kamere_deoStrane = document.querySelector("#kamere");
+
 for(let i=0; i < kamereSrc.length; i++){
-    var kamera = document.createElement("div");
-    kamera.classList.add("col-md-4","boxKamera", "shadow-lg",  "p-4","m-2", "mx-auto");
+    var divCard = document.createElement("div");
+    divCard.classList.add("card", "shadow", "d-flex", "justify-content", "align-items-center", "mb-2", "karticaKamera");
+    divCard.style.width = "10rem";
 
-    var kameraImg = document.createElement("img");
-    kameraImg.setAttribute("src", kamereSrc[i]);
-    kameraImg.classList.add("img-fluid");
-    kamera.appendChild(kameraImg);
-    var kameraIme = document.createElement("h5");
-    kameraImg.classList.add("nazivKamera");
-    kameraIme.textContent = kamereNaziv[i];
-    kamera.appendChild(kameraIme);
+    var slikaKamera = document.createElement("img");
+    slikaKamera.src = kamereSrc[i];
+    slikaKamera.classList.add("card-img-top", "img-fluid");
 
-    kameraDeoStrane.appendChild(kamera);
+    divCard.appendChild(slikaKamera);
+
+    var divBody = document.createElement("div");
+    divBody.classList.add("card-body");
+
+    var cardTitle = document.createElement("h5");
+    cardTitle.classList.add("cart-title", "text-center");
+    cardTitle.textContent = kamereNaziv[i];
+
+    if(i==2){
+        divCard.classList.remove("mb-2")
+        divCard.classList.add("p-2");
+        divBody.classList.add("mt-4");
+    }
+
+    divBody.appendChild(cardTitle);
+    divCard.appendChild(divBody);
+    kamere_deoStrane.appendChild(divCard);
 }
 
             /* DINAMICKI ISPIS TEAM */
 
 var imgTimSrc = new Array("assets/img/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg" , "assets/img/almos-bechtold-3402kvtHhOo-unsplash.jpg", "assets/img/austin-wade-X6Uj51n5CE8-unsplash.jpg");
 var timImena = new Array("Seth Zavala", "Ema Hancock", "Kavan Kay");
+var timDeoStrane = document.querySelector("#tim");
 
-var timDeoStrane = document.querySelector("#timIspis");
 for(let i=0; i < imgTimSrc.length; i++){
+    var divCardTim = document.createElement("div");
+    divCardTim.classList.add("card", "shadow-lg", "d-flex", "align-items-center", "p-3", "karticaTim");
+    divCardTim.style.width = "17rem";
 
-    var clanTim = document.createElement("div");
-    clanTim.classList.add("col-sm-3", "col-md-2", "teamMember", "shadow-lg");
+    var slikaTim = document.createElement("img");
+    slikaTim.src = imgTimSrc[i];
+    slikaTim.classList.add("card-img-top", "img-fluid");
 
-    var slikaTim = document.createElement("div");
-    slikaTim.classList.add("imgMember");
-    var imgTag = document.createElement("img");
-    imgTag.setAttribute("src", imgTimSrc[i]);
-    imgTag.classList.add("img-fluid","pt-3");
-    slikaTim.appendChild(imgTag);
-    clanTim.appendChild(slikaTim);
+    divCardTim.appendChild(slikaTim);
 
-    var imeTim = document.createElement("div");
-    imeTim.classList.add("nameMember","text-center");
-    var h2Tag = document.createElement("h2");
-    h2Tag.textContent = timImena[i];
-    imeTim.appendChild(h2Tag);
-    clanTim.appendChild(imeTim);
+    var divBodyTim = document.createElement("div");
+    divBodyTim.classList.add("card-body");
 
-    timDeoStrane.appendChild(clanTim);
+    var cardTitleTim = document.createElement("h5");
+    cardTitleTim.classList.add("cart-title", "text-center");
+    cardTitleTim.textContent = timImena[i];
+
+    divBodyTim.appendChild(cardTitleTim);
+    divCardTim.appendChild(divBodyTim);
+    timDeoStrane.appendChild(divCardTim);
+}
+
+/* DINAMICKI ISPIS P TAGOVA */
+
+var pTagovi = new Array();
+pTagovi[0] = "You need professional photography? You are in the right place!";
+pTagovi[1] = `PHOTOVEL company exists since 2000. All photograps are taken by
+professional artists and photographers who have years of professional 
+experience as well as excellent knowledge of post-production programs 
+guarantee that photography will be at the highest level.
+`;
+pTagovi[2] = `What sets PHOTOVEL from others is good portfolio and quality, which shows the wide range of services we provide.
+Taking photos of the most important moments of your life is what we do best.`
+
+for(let i = 0; i < 3; i++){
+    var pTag = document.createElement("p");
+    pTag.textContent = pTagovi[i];
+    document.querySelector("#textAbout").appendChild(pTag);
 }

@@ -9,46 +9,33 @@
         width: 500px;
     }
 
-    .nazivKamera h4{
-        font-size: 1rem;
-    }
 }
 
 @media screen and (max-width: 767px){
-    #podnaslov h1{
-        transform: rotate(0deg);
+    #logoNaslov h2{
+        font-size: 0rem;
         text-align: center;
-    }
-    .nazivKamera h4{
-        font-size: 1em !important;
     }
 
 }
 
 @media screen and (max-width: 600px){
-    #logoNaslov h2{
-        font-size: 3rem;
-        text-align: center;
-    }
     .slikaHover{
         width: 100%;
     }
-    #gallery, #contact{
-        margin-top: 1400px;
-    }
 }
 
-@media screen and (max-width: 577){
-    .nameMember h2{
-        font-size: 1rem !important;
-    }
-    
-    
-}
+
 @media screen and (max-width: 475px){
     
     .slikaHover{
         height: 500px;
+    }
+    #logoNaslov h2{
+        padding: 0.8rem !important;
+    }
+    #logoNaslov p{
+        font-size: 1rem;
     }
 }
 
@@ -59,8 +46,16 @@
     }
 
     #logoNaslov h2{
-        font-size: 2rem;
-        text-align: center;
-        padding: 1rem !important;
+        padding: 0.5rem !important;
+    }
+   
+}
+
+@media screen and (max-width: 350px){
+    #logoNaslov h2{
+        padding: 0rem !important;
+    }
+    #logoNaslov p{
+        font-size: 0.7rem;
     }
 }

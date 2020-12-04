@@ -28,12 +28,14 @@
                     <!-- JS -->
                 </ul>
             </div>
-            <div id="hamburger" class="d-lg-none d-block">
-                <img src="https://img.icons8.com/nolan/64/menu.png"/>
+            <div id="hamburger" class="d-block d-lg-none">
+                <img src="https://img.icons8.com/ios-filled/30/000000/menu.png"/>
+                <div id="meniHamburger">
+                </div>
             </div>
         </div>
         <div id="logoNaslov" class="container-fluid d-flex flex-wrap justify-content-center align-items-center align-content-center">
-            <h2 class="display-1 text-uppercase mt-5 p-4">photovel<p class="lead text-center font-weight-bold">~ photography services ~</p></h2>
+            <h2 class="text-uppercase mt-5 p-4 text-center">photovel<p class="lead text-center font-weight-bold">~ photography services ~</p></h2>
         </div>
         <div id="socMreze">
             <ul id="ulSocMreze" class="list-group text-center">
@@ -56,17 +58,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 col-lg-6 text-center d-flex align-items-center flex-wrap justify-content-center mt-sm-5 mt-lg-0">
-                    <p id="textAbout" class="effect">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type 
-                        specimen book. It has survived not only five centuries, but also the leap into 
-                        electronic typesetting, remaining essentially unchanged. It was popularised in 
-                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-                        and more recently with desktop publishing software like Aldus PageMaker including 
-                        versions of Lorem Ipsum.
-                    </p>
+                <div class="col-md-12 col-lg-6 text-center d-flex align-content-center flex-wrap justify-content-center mt-sm-5 mt-lg-0">
+                    <div id="textAbout">
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -74,38 +69,90 @@
     <!-- SERVICES -->
     <section class="container-fluid margina" id="services">
         <div class="naslovIspis"></div>
-        <div class="row d-flex justify-content-between flex-row margina">
-            <div class="col-12 col-md-3" id="podnaslov">
-                <h1>We use:</h1>
+        <div class="container-fluid d-flex justify-content-around align-items-center">
+            <div class="d-flex justify-content-center align-items-center flex-row margina">
+                <div id="podnaslov">
+                    <h1>We use:</h1>
+                </div>
+                <div id="kamere">
+                </div>
             </div>
-            <div class="col-12 col-md-9 d-flex justify-content-around align-items-center pr-5" id="kamere">
-               <!-- 
-                <div class="boxKamera shadow-lg p-2">
-                    <img src="assets/img/cc749ededc077309f29421d3cb727927 (1).png" class="img-fluid mb-3"/>
-                    <h4 class="nazivKamera text-center">Canon EOS 30D</h4>  
-                </div>
-                <div class="boxKamera shadow-lg p-2">
-                    <img src="assets/img/941035643.png" class="img-fluid mb-3"/>
-                    <h4 class="nazivKamera text-center">Nikon Z7</h4>  
-                </div>
-                <div class="boxKamera shadow-lg p-2">
-                    <img src="assets/img/23-video-camera-png-image.png" class="img-fluid mb-5 pb-3"/>
-                    <h4 class="nazivKamera text-center">Sony 4K</h4>  
-                </div>
-            -->
-            </div>
+            <div ></div>
         </div>
+        
     </section>
     <!-- TEAM -->
     <section class="container-fluid" id="team">
         <div class="naslovIspis"></div>
-        <div class="row d-flex align-items-center justify-content-around margina" id="timIspis">
-            <!-- JS -->
-        </div>
+            <div id="tim" class="d-flex align-items-center justify-content-around margina">
+                
+            </div>
     </section>
     <!-- GALLERY -->
     <section class="container-fluid" id="gallery">
         <div class="naslovIspis"></div>
+        <div class="container">
+            <div id="slikeGalerija" class="mt-5">
+                <ul class="list-group text-center d-flex justify-content-around flex-column flex-md-row">
+                    <li class="list-group-item border-0 list-group-item-primary shadow-sm" data-filter="celebration">
+                        
+                            Celebration
+                        
+                    </li>
+                    <li class="list-group-item border-0 list-group-item-secondary shadow-sm" data-filter="city">
+                        
+                            City
+                       
+                    </li>
+                    <li class="list-group-item border-0 list-group-item-success shadow-sm" data-filter="family">
+                        
+                            Family
+                        
+                    </li>
+                    <li class="list-group-item border-0 list-group-item-danger shadow-sm" data-filter="food">
+                        
+                            Food
+                       
+                    </li>
+                    <li class="list-group-item border-0 list-group-item-warning shadow-sm" data-filter="interior">
+                        
+                            Interior
+                        
+                    </li>
+                    <li class="list-group-item border-0 list-group-item-info shadow-sm" data-filter="nature">
+                        
+                            Nature
+                        
+                    </li>
+                    <li class="list-group-item border-0 list-group-item-dark shadow-sm" data-filter="people">
+                        
+                            People
+                       
+                    </li>
+                </ul>
+                <div class="sadrzajTab">
+                    <p>ovde si</p>
+                </div>
+                <div class="sadrzajTab">
+                    <p>sad si ovde</p>
+                </div>
+                <div class="sadrzajTab">
+                    <p>a sad si ovde</p>
+                </div>
+                <div class="sadrzajTab">
+                    <p>i ovde si</p>
+                </div>
+                <div class="sadrzajTab">
+                    <p>uspela si</p>
+                </div>
+                <div class="sadrzajTab">
+                    <p>bravo</p>
+                </div>
+                <div class="sadrzajTab">
+                    <p>svaka cast</p>
+                </div>              
+            </div>
+        </div>
     </section>
     <!-- CONTACT -->
     <section class="container-fluid" id="contact">
@@ -120,8 +167,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script>
-        VanillaTilt.init(document.querySelectorAll(".boxKamera"),{
-            max: 25,
+        VanillaTilt.init(document.querySelectorAll(".karticaKamera"),{
+            max: 30,
             speed: 400
         });
     </script>

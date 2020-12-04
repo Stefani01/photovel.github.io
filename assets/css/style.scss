@@ -26,8 +26,17 @@
       -webkit-filter: hue-rotate(360deg);
               filter: hue-rotate(360deg);
     }
-  }
-  
+}
+@keyframes flyRight{
+    //0% {opacity:0;}
+    //100% {opacity:1;}
+    0% { 
+    transform: translateX(200%); 		
+    }
+    100% { 
+    transform: translateX(0%); 
+    }
+} 
 
 html{
     scroll-behavior: smooth;
@@ -75,10 +84,9 @@ section{
     background-size: 1150px;
     text-shadow: 5px 5px 20px #3d3a3d;
     color: black;
-    #logo a{
-        font-size: 1.8rem;
-        font-weight: bold;
-        color: black;
+    .navbar-brand{
+        padding-top: 0.5px !important;
+        padding-bottom: 0.5rem !important;
     }
     
     #ulMeni li a {
@@ -89,6 +97,37 @@ section{
     
 }
 
+#hamburger{
+    #meniHamburger ul{
+        display: none;
+        z-index: 10;
+        opacity: 0.8;
+    }
+    img{
+        cursor: pointer;
+        padding-top: 0.4rem;
+    }
+    .list-group-item{
+        border: none !important;
+    }
+    a{
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: black;
+    }
+    .linkovi{
+        position: absolute;
+        left: 0;
+        display: block;
+        width: 100%;
+        text-align: right;
+        margin-top: 1.2rem;
+    }
+}
+
+.animacija{
+    animation: flyRight ease 1.8s;
+}
 
 .slikaHover {
     position: relative;
@@ -98,6 +137,7 @@ section{
 
 .slikaHover img{
     width: 100%;
+
 }
 .slikaHover .box {
     position: absolute;
@@ -106,30 +146,32 @@ section{
     width: 100%;
     height: 100%;
 }
-  
+
 .slikaHover .box:nth-child(1) {
     -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
             clip-path: polygon(0 0, 0% 100%, 100% 0);
+    transition: clip-path 0.5s ease;
 }
   
 .slikaHover .box:nth-child(2) {
     z-index: 2;
-    -webkit-transition: 1s;
-    transition: 1s;
     -webkit-clip-path: polygon(100% 100%, 0% 100%, 100% 0);
             clip-path: polygon(100% 100%, 0% 100%, 100% 0);
+    transition: clip-path 0.5s ease;
 }
-  
+
+
 .slikaHover .box:nth-child(1):hover, .box:nth-child(2):hover {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    
 }
   
 .slikaHover .box:nth-child(1):hover ~ .box:nth-child(2) {
     -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
             clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
 }
-  
+
 
 .borderNaslov {
     width: 25%;
@@ -139,8 +181,12 @@ section{
 }
 
 #header{
-    //background-color: rgba(0, 0, 0, 0.3)
     z-index: 10;
+}
+
+.promeniIzgled{
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+    background-color: rgba(255,255,255,0.8);
 }
 
 .naslovIspis{
@@ -178,30 +224,16 @@ section{
     }
 }
 
-.boxKamera{
-    width: 20%;
-    border-radius: 10px 10px 10px;
+
+#kamere, #tim{
+    .card-body{
+        display:none;
+    }
+    .card-img-top{
+        overflow: hidden !important;
+    }
 }
 
-.boxKamera img{
-    opacity: 1;
-}
-
-.nazivKamera{
-    transition: 0.5s;
-    opacity: 0;
-    transform-style: preserve-3d;
-    transform: translate3d(0,0,75px);
-}
-.boxKamera:hover .nazivKamera{
-    opacity: 1;
-}
-
-.boxKamera img{
-    transition: 0.5s;
-    transform-style: preserve-3d;
-    transform: translate3d(0,0,75px);
-}
 
 .teamMember{
     transition: 0.5s;
@@ -226,6 +258,17 @@ section{
 }
 
 .teamMember:hover{
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(119, 215, 230, 0.3), rgba(222, 52, 235, 0.3), rgba(60, 57, 60, 0.3));
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(119, 215, 230, 0.3), rgba(222, 52, 235, 0.3), #3c393c4d);
 }
 
+#slikeGalerija{
+    .list-group-item{
+        border-radius: inherit !important;
+        color: black !important;
+        text-shadow: 1px 1px 1px white;
+    }
+    .aktivan{
+        border: 2px solid rgb(122, 122, 122)!important;
+    }
+ 
+}
