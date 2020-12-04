@@ -272,3 +272,10 @@ section{
     }
  
 }
+
+#slikeSadrzaj{
+    .row{
+        display:flex !important;
+        flex-wrap: wrap !important;
+    }
+}

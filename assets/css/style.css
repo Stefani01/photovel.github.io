@@ -298,4 +298,12 @@ section {
 #slikeGalerija .aktivan {
   border: 2px solid #7a7a7a !important;
 }
+
+#slikeSadrzaj .row {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -ms-flex-wrap: wrap !important;
+      flex-wrap: wrap !important;
+}
 /*# sourceMappingURL=style.css.map */
