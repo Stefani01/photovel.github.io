@@ -304,11 +304,12 @@ section{
     width: 40%;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     text-align: center;
-    display: none;
     img{
         width: 50%;
+        text-align: center;
     }
 }
 

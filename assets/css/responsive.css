@@ -12,7 +12,7 @@
         margin-bottom: 200px;
     }
     #team {
-        margin-top: 400px !important;
+        margin-top: 350px !important;
     }
 
 }
@@ -22,16 +22,17 @@
         font-size: 0rem;
         text-align: center;
     }
-
     #modal{
-        width: 50%;
+        width: 60%;
     }
+    
 }
 
 @media screen and (max-width: 600px){
     .slikaHover{
         width: 100%;
     }
+   
 }
 
 
@@ -47,7 +48,7 @@
         font-size: 1rem;
     }
     #modal{
-        width: 60%;
+        width: 80%;
     }
 }
 

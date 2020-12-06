@@ -68,10 +68,7 @@ $(document).ready(function(){
     });
     $("#btnZatvori").click(function(){
         $("#modal-bg").removeClass("modal_active");
-    })
-
-    // slajder
-    
+    });
 
 });
 
