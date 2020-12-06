@@ -71,7 +71,7 @@ body{
 
 .margina{
     margin-top: 100px;
-    margin-bottom: 100px;;
+    //margin-bottom: 100px;;
 }
 section{
     height: 100vh;
@@ -243,23 +243,7 @@ section{
     opacity: 0;
     transform: 0.5s;
 }
-
-.teamMember .imgMember img{
-    width: 100%;
-    opacity: 0.5;
-}
-
-.teamMember:hover .imgMember img{
-    opacity: 1;
-}
-
-.teamMember:hover .nameMember h2{
-    opacity: 1;
-}
-
-.teamMember:hover{
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(119, 215, 230, 0.3), rgba(222, 52, 235, 0.3), #3c393c4d);
-}
+  
 
 #slikeGalerija{
     .list-group-item{
@@ -273,9 +257,101 @@ section{
  
 }
 
-#slikeSadrzaj{
+.slikeSadrzaj{
     .row{
         display:flex !important;
         flex-wrap: wrap !important;
     }
+}
+
+#socInfo{
+    .list-group-item{
+        padding: .3rem .8rem !important;
+    }
+}
+
+#podaci{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#modal-bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1s, opacity 1s;
+}
+
+.modal_active{
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+#modal{
+    background-color: white;
+    border-radius: 5px 5px 5px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    img{
+        width: 50%;
+    }
+}
+
+.modalOtvori{
+    img{
+        cursor: pointer;
+    }
+}
+
+#forma{
+    span{
+        font-size: 0.6rem !important;
+    }
+}
+.greska{
+    color: red;
+}
+.ispravno{
+    color: green;
+}
+
+#sliderServices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slider{
+    display: flex;
+    width: 100% !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    animation: fade 1.5s ease;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+#prev, #next{
+    cursor: pointer;
 }

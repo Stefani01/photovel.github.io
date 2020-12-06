@@ -58,12 +58,21 @@ $(document).ready(function(){
         $("#slikeGalerija li").removeClass("aktivan");
         $(this).addClass("aktivan");
         $(".sadrzajTab").hide();
-        $(".sadrzajTab").eq(index).show();
+        $(".sadrzajTab").eq(index).fadeIn("slow").show();
     })
 
+    // modal
+
+    $(".modalOtvori").click(function(){
+        $("#modal-bg").addClass("modal_active");
+    });
+    $("#btnZatvori").click(function(){
+        $("#modal-bg").removeClass("modal_active");
+    })
+
+    // slajder
     
-    
+
 });
 
-var slika = $(".karticaTim").find(".card-img-top");
-console.log(slika);
+    
