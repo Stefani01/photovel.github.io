@@ -32,7 +32,12 @@
     .slikaHover{
         width: 100%;
     }
-   
+   #kamere{
+       flex-direction: column;
+   }
+   #team {
+    margin-top: 500px !important;
+    }
 }
 
 

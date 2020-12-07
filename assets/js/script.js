@@ -70,6 +70,11 @@ $(document).ready(function(){
         $("#modal-bg").removeClass("modal_active");
     });
 
+
+    //forma
+    $("#btnSend").click(function(e){
+        e.preventDefault();
+    })
 });
 
     

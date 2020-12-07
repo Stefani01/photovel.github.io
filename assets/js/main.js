@@ -82,8 +82,9 @@ for(let i=0; i < naslovi.length; i++){
 
 var socMrezeIkonice = new Array("<img src='https://img.icons8.com/nolan/30/facebook-new.png'/>","<img src='https://img.icons8.com/nolan/30/instagram-new.png'/>", "<img src='https://img.icons8.com/nolan/30/pinterest.png'/>", "<img src='https://img.icons8.com/nolan/30/phone.png'/>", "<img src='https://img.icons8.com/nolan/30/apple-mail.png'/>" );
 var socMrezeLink = new Array("https://www.facebook.com/", "https://www.instagram.com/", "https://www.pinterest.com/", "tel:123-456-7890", "mailto: photovel@google.com");
-
+var socMrezealt = new Array("ikonica facebook", "ikonica instagram", "ikonica pinterest", "ikonica telefon", "ikonica mail");
 var socMreze = document.querySelector("#ulSocMreze");
+
 for(let i=0; i < socMrezeIkonice.length; i++){
     var liMeni = document.createElement("li");
     liMeni.classList.add("list-group-item");
@@ -98,15 +99,17 @@ for(let i=0; i < socMrezeIkonice.length; i++){
 
 var kamereSrc = new Array("assets/img/cc749ededc077309f29421d3cb727927-(1).png", "assets/img/941035643.png", "assets/img/23-video-camera-png-image.png");
 var kamereNaziv = new Array("Canon EOS 600D", "Nikon Z7", "Canon XF 200");
+var kamereAlt = new Array("canon EOS 600D", "nikon Z7", "canon XF 200");
 var kamere_deoStrane = document.querySelector("#kamere");
 
 for(let i=0; i < kamereSrc.length; i++){
     var divCard = document.createElement("div");
-    divCard.classList.add("card", "shadow", "d-flex", "justify-content", "align-items-center", "mb-2", "karticaKamera");
+    divCard.classList.add("card", "shadow", "d-inline-flex","justify-content-center", "align-items-center", "m-2", "karticaKamera");
     divCard.style.width = "10rem";
 
     var slikaKamera = document.createElement("img");
     slikaKamera.src = kamereSrc[i];
+    slikaKamera.setAttribute("alt", kamereAlt[i]);
     slikaKamera.classList.add("card-img-top", "img-fluid");
 
     divCard.appendChild(slikaKamera);
@@ -119,8 +122,8 @@ for(let i=0; i < kamereSrc.length; i++){
     cardTitle.textContent = kamereNaziv[i];
 
     if(i==2){
-        divCard.classList.remove("mb-2")
-        divCard.classList.add("p-2");
+        divCard.classList.remove("mb-3")
+        divCard.classList.add("pt-4");
         divBody.classList.add("mt-4");
     }
 
@@ -129,10 +132,46 @@ for(let i=0; i < kamereSrc.length; i++){
     kamere_deoStrane.appendChild(divCard);
 }
 
-            /* DINAMICKI ISPIS TEAM */
+var slajderSrc = new Array("https://img.icons8.com/nolan/85/photographer.png","https://img.icons8.com/nolan/85/camera.png","https://img.icons8.com/nolan/85/advanced-lighting-panel.png","https://img.icons8.com/nolan/85/photo-editor.png", "https://img.icons8.com/nolan/85/commercial-development-management.png","https://img.icons8.com/nolan/85/product.png", "https://img.icons8.com/nolan/85/commercial.png","https://img.icons8.com/nolan/85/tear-off-calendar.png","https://img.icons8.com/nolan/64/hamburger.png","https://img.icons8.com/nolan/64/running.png");
+var slajderAlt = new Array("icon phorographer","icon camera","icon light","icon photo editor", "icon team","icon product","icon commercial","icon event", "icon hamburger", "icon human");
+var slajderPTag = new Array("Full-day or half-day photo shoots with all necessary equipment","Professional camera and lens kits","Professional lighting setup", "Photo editing, color correction and retouching","Corporate team photography","Product photography", "Commercial photography", "Event photography","Food photography", "Lifestyle photography");
+
+var deo_strane_services = document.querySelector("#sliderServices");
+var strelicaLevo = document.createElement("span");
+strelicaLevo.setAttribute("id","prev");
+strelicaLevo.innerHTML =`
+<img src="https://img.icons8.com/nolan/64/collapse-arrow.png"/>
+`;
+deo_strane_services.appendChild(strelicaLevo);
+
+for(let i=0; i < slajderSrc.length; i++){
+    var klasaSlider = document.createElement("div");
+    klasaSlider.classList.add("slider");
+
+    var sliderImg = document.createElement("img");
+    sliderImg.src = slajderSrc[i];
+    sliderImg.alt = slajderAlt[i];
+    klasaSlider.appendChild(sliderImg);
+
+    var sliderText = document.createElement("p");
+    sliderText.classList.add("pt-4");
+    sliderText.textContent = slajderPTag[i];
+    klasaSlider.appendChild(sliderText);
+
+    deo_strane_services.appendChild(klasaSlider);
+}
+var strelicaDesno = document.createElement("span");
+strelicaDesno.setAttribute("id","next");
+strelicaDesno.innerHTML =`
+<img src="https://img.icons8.com/nolan/64/expand-arrow.png"/>
+`;
+deo_strane_services.appendChild(strelicaDesno);
+/* DINAMICKI ISPIS TEAM */
 
 var imgTimSrc = new Array("assets/img/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg" , "assets/img/almos-bechtold-3402kvtHhOo-unsplash.jpg", "assets/img/austin-wade-X6Uj51n5CE8-unsplash.jpg");
 var timImena = new Array("Seth Zavala", "Ema Hancock", "Kavan Kay");
+var timAlt = new Array("picture of man in white shirt", "picture of woman", "picture of man with green eyes");
+
 var timDeoStrane = document.querySelector("#tim");
 
 for(let i=0; i < imgTimSrc.length; i++){
@@ -142,6 +181,7 @@ for(let i=0; i < imgTimSrc.length; i++){
 
     var slikaTim = document.createElement("img");
     slikaTim.src = imgTimSrc[i];
+    slikaTim.setAttribute("alt", timAlt[i]);
     slikaTim.classList.add("card-img-top", "img-fluid");
 
     divCardTim.appendChild(slikaTim);
@@ -184,12 +224,25 @@ var liNizGalerija = new Array("Celebration", "City", "Family", "Food", "Interior
 var liNizKlasaBoja = new Array("primary", "secondary", "success", "danger", "warning", "info", "dark");
 
 var slikeCelebration = new Array("assets/img/celebration/stephen-leonardi-dYgv-1JnPTA-unsplash.jpg","assets/img/celebration/juan-encalada-x-otqcCinQk-unsplash.jpg","assets/img/celebration/nick-fewings-kmLUcvhqhSo-unsplash.jpg","assets/img/celebration/jed-villejo-4SByp8kIoOE-unsplash.jpg");
+var celebrationAlt = new Array("wedding day", "picture of baby", "birthday", "party");
+
 var slikeCity = new Array("assets/img/city/pexels-pixabay-356830.jpg","assets/img/city/pexels-paweł-l-1121782.jpg","assets/img/city/pexels-tatiana-fet-1105766.jpg","assets/img/city/pexels-adrianna-calvo-17682.jpg");
+var cityAlt = new Array("city on sunset", "city in the reflection", "black and white photo of city", "city at night");
+
 var slikeFamily = new Array("assets/img/family/pexels-andreza-vasconcelos-3330714.jpg","assets/img/family/pexels-andreas-wohlfahrt-2456327.jpg","assets/img/family/pexels-singkham-1116050.jpg","assets/img/family/pexels-daria-obymaha-1683975.jpg","assets/img/family/jessica-rockowitz-6c4Uhhe68yQ-unsplash.jpg","assets/img/family/liv-bruce-odIhQypCuUk-unsplash.jpg");
+var familyAlt = new Array("black and white photo of family", "photo of family", "happy kid", "mother with dother", "family", "parents and child hand");
+
 var slikeFood = new Array("assets/img/food/jill-heyer-toxlLueLNDs-unsplash.jpg","assets/img/food/joseph-gonzalez-fdlZBWIP0aM-unsplash.jpg","assets/img/food/alex-munsell-Yr4n8O_3UPc-unsplash.jpg","assets/img/food/brooke-lark-W9OKrxBqiZA-unsplash.jpg");
+var foodAlt = new Array("cake", "eggs on plate with salad", "meat with potato","oatmeal");
+
 var slikeInterior = new Array("assets/img/interior/pexels-jean-van-der-meulen-1457842.jpg","assets/img/interior/pexels-pixabay-279719 (1).jpg","assets/img/interior/pexels-tiff-ng-3700245.jpg");
+var interiorAlt = new Array("living room", "grey living room", "room with plants");
+
 var slikeNature = new Array("assets/img/nature/pexels-johannes-rapprich-2283757.jpg","assets/img/nature/pexels-goran-vrakela-245121.jpg","assets/img/nature/pexels-tobias-bjørkli-2113566 (1).jpg","assets/img/nature/pexels-michael-block-3225517.jpg","assets/img/nature/pexels-alex-azabache-3757141.jpg","assets/img/nature/pexels-ruvim-miksanskiy-1438761.jpg");
+var natureAlt = new Array("snow on mountain", "sea at night", "beautiful sky", "river", "man on the beach", "snow in forest");
+
 var slikePeople = new Array("assets/img/people/pexels-nappy-935985.jpg","assets/img/people/pexels-pixabay-458766.jpg","assets/img/people/pexels-dazzle-jam-2710063.jpg","assets/img/people/pexels-tuấn-kiệt-jr-1382731.jpg","assets/img/people/pexels-dazzle-jam-2689401.jpg","assets/img/people/pexels-kourosh-qaffari-1921168.jpg");
+var peopleAlt = new Array("woman with bracelets", "phoot of woman", "woman in blue water", "woman with hat", "woman in pink water", "woman in forest");
 
 var ulGalerija = document.createElement("ul");
 ulGalerija.classList.add("list-group", "text-center", "d-flex", "justify-content-around", "flex-column", "flex-md-row");
@@ -220,6 +273,7 @@ for(let i = 0; i < slikeCelebration.length; i++){
         if(j==0){
             var slikuUbaci = document.createElement("img");
             slikuUbaci.classList.add("img-fluid", "pb-2");
+            slikuUbaci.setAttribute("alt", celebrationAlt[j]);
             slikuUbaci.src = slikeCelebration[j];
             kolona.appendChild(slikuUbaci);
             
@@ -228,6 +282,7 @@ for(let i = 0; i < slikeCelebration.length; i++){
             for(let k=0; k<2; k++){
                 var slikuUbaci = document.createElement("img");
                 slikuUbaci.classList.add("img-fluid", "pb-2");
+                slikuUbaci.setAttribute("alt", celebrationAlt[k+1]);
                 slikuUbaci.src = slikeCelebration[k+1];
                 kolona.appendChild(slikuUbaci);
                 
@@ -236,6 +291,7 @@ for(let i = 0; i < slikeCelebration.length; i++){
         if(j==2){
             var slikuUbaci = document.createElement("img");
             slikuUbaci.classList.add("img-fluid", "pb-2");
+            slikuUbaci.setAttribute("alt", celebrationAlt[j+1]);
             slikuUbaci.src = slikeCelebration[j+1];
             kolona.appendChild(slikuUbaci);
             
@@ -264,11 +320,14 @@ for(let i = 0; i < slikeCity.length; i++){
         for(let k = 0; k < 2; k++){
             var slikuUbaci1 = document.createElement("img");
             slikuUbaci1.classList.add("img-fluid", "pb-2");
+            slikuUbaci1.setAttribute("alt", cityAlt[k]);
             if(j==1){
                 slikuUbaci1.src = slikeCity[k+j+1];
+                slikuUbaci1.setAttribute("alt", cityAlt[k+j+1]);
             }
             else{
                 slikuUbaci1.src = slikeCity[k+j];
+                slikuUbaci1.setAttribute("alt", cityAlt[k+j]);
             }
             
             kolona1.appendChild(slikuUbaci1);
@@ -298,6 +357,7 @@ for(let i = 0; i < slikeFamily.length; i++){
             var slikuUbaci2 = document.createElement("img");
             slikuUbaci2.classList.add("img-fluid", "pb-2");
             slikuUbaci2.src = slikeFamily[j];
+            slikuUbaci2.setAttribute("alt", familyAlt[j]);
             kolona2.appendChild(slikuUbaci2);
             
         }
@@ -306,6 +366,7 @@ for(let i = 0; i < slikeFamily.length; i++){
                 var slikuUbaci2 = document.createElement("img");
                 slikuUbaci2.classList.add("img-fluid", "pb-2");
                 slikuUbaci2.src = slikeFamily[k+j];
+                slikuUbaci2.setAttribute("alt", familyAlt[k+j]);
                 kolona2.appendChild(slikuUbaci2);
             }
         }
@@ -314,13 +375,13 @@ for(let i = 0; i < slikeFamily.length; i++){
                 var slikuUbaci2 = document.createElement("img");
                 slikuUbaci2.classList.add("img-fluid", "pb-2");
                 slikuUbaci2.src = slikeFamily[slikeFamily.length-j+k];
+                slikuUbaci2.setAttribute("alt", familyAlt[familyAlt.length-j+k]);
                 kolona2.appendChild(slikuUbaci2);
             }
         }
         slikeSadrzaj2.appendChild(kolona2);
     }   
 }   
-
 drzac2.appendChild(slikeSadrzaj2);
 sadrzajTab2.appendChild(drzac2);
 document.querySelector("#slikeGalerija").appendChild(sadrzajTab2);
@@ -343,6 +404,7 @@ for(let i = 0; i < slikeFamily.length; i++){
             var slikuUbaci3 = document.createElement("img");
             slikuUbaci3.classList.add("img-fluid", "pb-2");
             slikuUbaci3.src = slikeFood[j];
+            slikuUbaci3.setAttribute("alt", foodAlt[j]);
             kolona3.appendChild(slikuUbaci3);
             
         }
@@ -350,6 +412,7 @@ for(let i = 0; i < slikeFamily.length; i++){
             var slikuUbaci3 = document.createElement("img");
             slikuUbaci3.classList.add("img-fluid", "pb-2");
             slikuUbaci3.src = slikeFood[j];
+            slikuUbaci3.setAttribute("alt", foodAlt[j]);
             kolona3.appendChild(slikuUbaci3);
         }
         if(j==2){
@@ -357,6 +420,7 @@ for(let i = 0; i < slikeFamily.length; i++){
                 var slikuUbaci3 = document.createElement("img");
                 slikuUbaci3.classList.add("img-fluid", "pb-2");
                 slikuUbaci3.src = slikeFood[j+k];
+                slikuUbaci3.setAttribute("alt", foodAlt[j+k]);
                 kolona3.appendChild(slikuUbaci3);
             }
         }
@@ -387,6 +451,7 @@ for(let i = 0; i < slikeInterior.length; i++){
                 var slikuUbaci4 = document.createElement("img");
                 slikuUbaci4.classList.add("img-fluid", "pb-2");
                 slikuUbaci4.src = slikeInterior[j+k];
+                slikuUbaci4.setAttribute("alt", interiorAlt[j+k]);
                 kolona4.appendChild(slikuUbaci4);
             }
         }
@@ -394,6 +459,7 @@ for(let i = 0; i < slikeInterior.length; i++){
             var slikuUbaci4 = document.createElement("img");
             slikuUbaci4.classList.add("img-fluid", "pb-2");
             slikuUbaci4.src = slikeInterior[j+1];
+            slikuUbaci4.setAttribute("alt", interiorAlt[j+1]);
             kolona4.appendChild(slikuUbaci4);
         }
         slikeSadrzaj4.appendChild(kolona4);
@@ -422,6 +488,7 @@ for(let i = 0; i < slikeNature.length; i++){
                 var slikuUbaci5 = document.createElement("img");
                 slikuUbaci5.classList.add("img-fluid", "pb-2");
                 slikuUbaci5.src = slikeNature[j+k];
+                slikuUbaci5.setAttribute("alt", natureAlt[j+k]);
                 kolona5.appendChild(slikuUbaci5);
             }
         }
@@ -429,6 +496,7 @@ for(let i = 0; i < slikeNature.length; i++){
             var slikuUbaci5 = document.createElement("img");
             slikuUbaci5.classList.add("img-fluid", "pb-2");
             slikuUbaci5.src = slikeNature[slikeNature.length-j-2];
+            slikuUbaci5.setAttribute("alt", natureAlt[natureAlt.length-j-2]);
             kolona5.appendChild(slikuUbaci5);
         }
         if(j==2){
@@ -436,6 +504,7 @@ for(let i = 0; i < slikeNature.length; i++){
                 var slikuUbaci5 = document.createElement("img");
                 slikuUbaci5.classList.add("img-fluid", "pb-2");
                 slikuUbaci5.src = slikeNature[slikeNature.length-j+k];
+                slikuUbaci5.setAttribute("alt", natureAlt[natureAlt.length-j+k]);
                 kolona5.appendChild(slikuUbaci5);
             }
         }
@@ -465,6 +534,7 @@ for(let i = 0; i < slikePeople.length; i++){
                 var slikuUbaci6 = document.createElement("img");
                 slikuUbaci6.classList.add("img-fluid", "pb-2");
                 slikuUbaci6.src = slikePeople[j+k];
+                slikuUbaci6.setAttribute("alt", peopleAlt[j+k]);
                 kolona6.appendChild(slikuUbaci6);
             }
         }
@@ -472,6 +542,7 @@ for(let i = 0; i < slikePeople.length; i++){
             var slikuUbaci6 = document.createElement("img");
             slikuUbaci6.classList.add("img-fluid", "pb-2");
             slikuUbaci6.src = slikePeople[slikePeople.length-j-2];
+            slikuUbaci6.setAttribute("alt", peopleAlt[peopleAlt.length-j-2]);
             kolona6.appendChild(slikuUbaci6);
         }
         if(j==2){
@@ -479,6 +550,7 @@ for(let i = 0; i < slikePeople.length; i++){
                 var slikuUbaci6 = document.createElement("img");
                 slikuUbaci6.classList.add("img-fluid", "pb-2");
                 slikuUbaci6.src = slikePeople[slikePeople.length-j+k];
+                slikuUbaci6.setAttribute("alt", peopleAlt[peopleAlt.length-j+k]);
                 kolona6.appendChild(slikuUbaci6);
             }
         }
@@ -492,35 +564,17 @@ document.querySelector("#slikeGalerija").appendChild(sadrzajTab6);
 
 /* CONTACT */
 
-    
-var imgInfo = new Array("https://img.icons8.com/nolan/30/worldwide-location.png", "https://img.icons8.com/nolan/30/apple-mail.png", "https://img.icons8.com/nolan/30/phone.png");
-var aInfo = new Array("photovel@gmail.com", "123-456-789");
-var ahrefInfo = new Array("mailto:photovel@gmail.com", "tel:123-456-789");
+var aInfo = new Array("Adress: New York, NY 10001 SAD","Email: photovel@gmail.com", "Phone: 123-456-789");
 
 var ulInfo = document.createElement("ul");
 ulInfo.classList.add("list-group");
 
-for(let i=0; i < imgInfo.length; i++){
+for(let i=0; i < aInfo.length; i++){
     var liInfo = document.createElement("li");
     liInfo.classList.add("list-group-item");
 
-    var infoSlika = document.createElement("img");
-    infoSlika.src = imgInfo[i];
-
-    liInfo.appendChild(infoSlika);
+    liInfo.textContent = aInfo[i];
     
-    if(i == 0){
-        liInfo.textContent = "New York, NY 10001 SAD";
-    }
-    else if(i > 0){
-        for(let j=0; j < 1; j++){
-            var linkInfo = document.createElement("a");
-            linkInfo.href = ahrefInfo[j];
-            linkInfo.textContent = aInfo[j];
-
-            liInfo.appendChild(linkInfo);
-        } 
-    }
     ulInfo.appendChild(liInfo);
 }
 document.querySelector("#listaInfo").appendChild(ulInfo);
@@ -532,7 +586,7 @@ for(let i=0; i < (socMrezeIkonice.length - 2); i++){
     liSocInfo.classList.add("list-group-item");
 
     var aSocInfo = document.createElement("a");
-    aSocInfo.href = socMrezeLink[i];
+    aSocInfo.src = socMrezeLink[i];
     aSocInfo.innerHTML = socMrezeIkonice[i];
 
     liSocInfo.appendChild(aSocInfo);
@@ -676,6 +730,7 @@ document.querySelector("#btnSend").addEventListener("click", function(){
         porukaPolje.nextElementSibling.classList.add("ispravno");
         porukaPolje.nextElementSibling.innerHTML = "✓";
     }
+
 })
 
 

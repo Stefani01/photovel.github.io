@@ -218,12 +218,13 @@ section{
  
 }
 
+/*
 #podnaslov{
     h1{
         transform: rotate(-90deg);
     }
 }
-
+*/
 
 #kamere, #tim{
     .card-body{
@@ -234,6 +235,12 @@ section{
     }
 }
 
+#kamere{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //flex-direction: column;
+}
 
 .teamMember{
     transition: 0.5s;
@@ -321,7 +328,7 @@ section{
 
 #forma{
     span{
-        font-size: 0.6rem !important;
+        font-size: 0.65rem !important;
     }
 }
 .greska{
@@ -332,10 +339,10 @@ section{
 }
 
 #sliderServices{
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    flex-direction: column;
 }
 
 .slider{
@@ -343,9 +350,14 @@ section{
     width: 100% !important;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     text-align: center;
-    animation: fade 1.5s ease;
+    animation: fade 1.5s ease-in-out;
+}
+
+#prev, #next{
+    img{
+        transform: rotate(-90deg);
+    }
 }
 
 @keyframes fade {

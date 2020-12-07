@@ -246,17 +246,31 @@ section {
   padding: .25rem 0.5rem !important;
 }
 
-#podnaslov h1 {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+/*
+#podnaslov{
+    h1{
+        transform: rotate(-90deg);
+    }
 }
-
+*/
 #kamere .card-body, #tim .card-body {
   display: none;
 }
 
 #kamere .card-img-top, #tim .card-img-top {
   overflow: hidden !important;
+}
+
+#kamere {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .teamMember {
@@ -366,7 +380,7 @@ section {
 }
 
 #forma span {
-  font-size: 0.6rem !important;
+  font-size: 0.65rem !important;
 }
 
 .greska {
@@ -378,19 +392,15 @@ section {
 }
 
 #sliderServices {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .slider {
@@ -404,13 +414,14 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   text-align: center;
-  -webkit-animation: fade 1.5s ease;
-          animation: fade 1.5s ease;
+  -webkit-animation: fade 1.5s ease-in-out;
+          animation: fade 1.5s ease-in-out;
+}
+
+#prev img, #next img {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 @-webkit-keyframes fade {
