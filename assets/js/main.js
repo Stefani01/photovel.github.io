@@ -266,34 +266,53 @@ for(let i = 0; i < slikeCelebration.length; i++){
     
     var slikeSadrzaj = document.createElement("div");
     slikeSadrzaj.classList.add("slikeSadrzaj","row","mt-2");
-
+    
     for(let j=0; j < 3; j++){
         var kolona = document.createElement("div");
         kolona.classList.add("col");
+        
         if(j==0){
+            var aslika = document.createElement("a");
+            aslika.setAttribute("href", slikeCelebration[j]);
+            aslika.setAttribute("data-lightbox", "slika");
+
             var slikuUbaci = document.createElement("img");
             slikuUbaci.classList.add("img-fluid", "pb-2");
             slikuUbaci.setAttribute("alt", celebrationAlt[j]);
+            //slikuUbaci.setAttribute("data-lightbox","slika");
             slikuUbaci.src = slikeCelebration[j];
-            kolona.appendChild(slikuUbaci);
+            aslika.appendChild(slikuUbaci);
+            kolona.appendChild(aslika);
             
         }
         if(j==1){
             for(let k=0; k<2; k++){
+                var aslika = document.createElement("a");
+                aslika.setAttribute("href", slikeCelebration[k+1]);
+                aslika.setAttribute("data-lightbox", "slika");
+
                 var slikuUbaci = document.createElement("img");
                 slikuUbaci.classList.add("img-fluid", "pb-2");
                 slikuUbaci.setAttribute("alt", celebrationAlt[k+1]);
+                //slikuUbaci.setAttribute("data-lightbox","slika");
                 slikuUbaci.src = slikeCelebration[k+1];
-                kolona.appendChild(slikuUbaci);
+                aslika.appendChild(slikuUbaci);
+                kolona.appendChild(aslika);
                 
             }
         }
         if(j==2){
+            var aslika = document.createElement("a");
+            aslika.setAttribute("href", slikeCelebration[j+1]);
+            aslika.setAttribute("data-lightbox", "slika");
+
             var slikuUbaci = document.createElement("img");
             slikuUbaci.classList.add("img-fluid", "pb-2");
             slikuUbaci.setAttribute("alt", celebrationAlt[j+1]);
+            //slikuUbaci.setAttribute("data-lightbox","slika");
             slikuUbaci.src = slikeCelebration[j+1];
-            kolona.appendChild(slikuUbaci);
+            aslika.appendChild(slikuUbaci);
+            kolona.appendChild(aslika);
             
         }
         slikeSadrzaj.appendChild(kolona);
@@ -317,20 +336,31 @@ for(let i = 0; i < slikeCity.length; i++){
     for(let j = 0; j < 2; j++){
         var kolona1 = document.createElement("div");
         kolona1.classList.add("col");
+        
         for(let k = 0; k < 2; k++){
+            var aslika = document.createElement("a");
+            aslika.setAttribute("href", slikeCity[k]);
+            aslika.setAttribute("data-lightbox", "slika");
+
             var slikuUbaci1 = document.createElement("img");
             slikuUbaci1.classList.add("img-fluid", "pb-2");
             slikuUbaci1.setAttribute("alt", cityAlt[k]);
             if(j==1){
+                var aslika = document.createElement("a");
+                aslika.setAttribute("href", slikeCity[k+j+1]);
+                aslika.setAttribute("data-lightbox", "slika");
                 slikuUbaci1.src = slikeCity[k+j+1];
                 slikuUbaci1.setAttribute("alt", cityAlt[k+j+1]);
             }
             else{
+                var aslika = document.createElement("a");
+                aslika.setAttribute("href", slikeCity[k+j]);
+                aslika.setAttribute("data-lightbox", "slika");
                 slikuUbaci1.src = slikeCity[k+j];
                 slikuUbaci1.setAttribute("alt", cityAlt[k+j]);
             }
-            
-            kolona1.appendChild(slikuUbaci1);
+            aslika.appendChild(slikuUbaci1);
+            kolona1.appendChild(aslika);
         }
         slikeSadrzaj1.appendChild(kolona1);
     }
@@ -354,29 +384,44 @@ for(let i = 0; i < slikeFamily.length; i++){
         var kolona2 = document.createElement("div");
         kolona2.classList.add("col");
         if(j==0){
+            var aslika = document.createElement("a");
+            aslika.setAttribute("href", slikeFamily[j]);
+            aslika.setAttribute("data-lightbox", "slika");
+
             var slikuUbaci2 = document.createElement("img");
             slikuUbaci2.classList.add("img-fluid", "pb-2");
             slikuUbaci2.src = slikeFamily[j];
             slikuUbaci2.setAttribute("alt", familyAlt[j]);
-            kolona2.appendChild(slikuUbaci2);
+            aslika.appendChild(slikuUbaci2);
+            kolona2.appendChild(aslika);
             
         }
         if(j==1){
             for(let k=0; k<3; k++){
+                var aslika = document.createElement("a");
+                aslika.setAttribute("href", slikeFamily[k+j]);
+                aslika.setAttribute("data-lightbox", "slika");
+
                 var slikuUbaci2 = document.createElement("img");
                 slikuUbaci2.classList.add("img-fluid", "pb-2");
                 slikuUbaci2.src = slikeFamily[k+j];
                 slikuUbaci2.setAttribute("alt", familyAlt[k+j]);
-                kolona2.appendChild(slikuUbaci2);
+                aslika.appendChild(slikuUbaci2);
+                kolona2.appendChild(aslika);
             }
         }
         if(j==2){
             for(let k=0; k < 2; k++){
+                var aslika = document.createElement("a");
+                aslika.setAttribute("href", slikeFamily[slikeFamily.length-j+k]);
+                aslika.setAttribute("data-lightbox", "slika");
+
                 var slikuUbaci2 = document.createElement("img");
                 slikuUbaci2.classList.add("img-fluid", "pb-2");
                 slikuUbaci2.src = slikeFamily[slikeFamily.length-j+k];
                 slikuUbaci2.setAttribute("alt", familyAlt[familyAlt.length-j+k]);
-                kolona2.appendChild(slikuUbaci2);
+                aslika.appendChild(slikuUbaci2);
+                kolona2.appendChild(aslika);
             }
         }
         slikeSadrzaj2.appendChild(kolona2);
@@ -401,27 +446,42 @@ for(let i = 0; i < slikeFamily.length; i++){
         var kolona3 = document.createElement("div");
         kolona3.classList.add("col");
         if(j==0){
+            var aslika = document.createElement("a");
+            aslika.setAttribute("href", slikeFood[j]);
+            aslika.setAttribute("data-lightbox", "slika");
+
             var slikuUbaci3 = document.createElement("img");
             slikuUbaci3.classList.add("img-fluid", "pb-2");
             slikuUbaci3.src = slikeFood[j];
             slikuUbaci3.setAttribute("alt", foodAlt[j]);
-            kolona3.appendChild(slikuUbaci3);
+            aslika.appendChild(slikuUbaci3);
+            kolona3.appendChild(aslika);
             
         }
         if(j==1){
+            var aslika = document.createElement("a");
+            aslika.setAttribute("href", slikeFood[j]);
+            aslika.setAttribute("data-lightbox", "slika");
+
             var slikuUbaci3 = document.createElement("img");
             slikuUbaci3.classList.add("img-fluid", "pb-2");
             slikuUbaci3.src = slikeFood[j];
             slikuUbaci3.setAttribute("alt", foodAlt[j]);
-            kolona3.appendChild(slikuUbaci3);
+            aslika.appendChild(slikuUbaci3);
+            kolona3.appendChild(aslika);
         }
         if(j==2){
             for(let k=0; k < 2; k++){
+                var aslika = document.createElement("a");
+                aslika.setAttribute("href", slikeFood[j+k]);
+                aslika.setAttribute("data-lightbox", "slika");
+
                 var slikuUbaci3 = document.createElement("img");
                 slikuUbaci3.classList.add("img-fluid", "pb-2");
                 slikuUbaci3.src = slikeFood[j+k];
                 slikuUbaci3.setAttribute("alt", foodAlt[j+k]);
-                kolona3.appendChild(slikuUbaci3);
+                aslika.appendChild(slikuUbaci3);
+            kolona3.appendChild(aslika);
             }
         }
         slikeSadrzaj3.appendChild(kolona3);
@@ -448,19 +508,29 @@ for(let i = 0; i < slikeInterior.length; i++){
         kolona4.classList.add("col");
         if(j==0){
             for(let k=0; k < 2; k++){
+                var aslika = document.createElement("a");
+                aslika.setAttribute("href", slikeInterior[j+k]);
+                aslika.setAttribute("data-lightbox", "slika");
+
                 var slikuUbaci4 = document.createElement("img");
                 slikuUbaci4.classList.add("img-fluid", "pb-2");
                 slikuUbaci4.src = slikeInterior[j+k];
                 slikuUbaci4.setAttribute("alt", interiorAlt[j+k]);
-                kolona4.appendChild(slikuUbaci4);
+                aslika.appendChild(slikuUbaci4);
+                kolona4.appendChild(aslika);
             }
         }
         else{
+            var aslika = document.createElement("a");
+            aslika.setAttribute("href", slikeInterior[j+1]);
+            aslika.setAttribute("data-lightbox", "slika");
+
             var slikuUbaci4 = document.createElement("img");
             slikuUbaci4.classList.add("img-fluid", "pb-2");
             slikuUbaci4.src = slikeInterior[j+1];
             slikuUbaci4.setAttribute("alt", interiorAlt[j+1]);
-            kolona4.appendChild(slikuUbaci4);
+            aslika.appendChild(slikuUbaci4);
+            kolona4.appendChild(aslika);
         }
         slikeSadrzaj4.appendChild(kolona4);
     }
@@ -485,27 +555,42 @@ for(let i = 0; i < slikeNature.length; i++){
         kolona5.classList.add("col");
         if(j==0){
             for(let k=0; k < 3; k++){
+                var aslika = document.createElement("a");
+                aslika.setAttribute("href", slikeNature[j+k]);
+                aslika.setAttribute("data-lightbox", "slika");
+
                 var slikuUbaci5 = document.createElement("img");
                 slikuUbaci5.classList.add("img-fluid", "pb-2");
                 slikuUbaci5.src = slikeNature[j+k];
                 slikuUbaci5.setAttribute("alt", natureAlt[j+k]);
-                kolona5.appendChild(slikuUbaci5);
+                aslika.appendChild(slikuUbaci5);
+                kolona5.appendChild(aslika);
             }
         }
         if(j==1){
+            var aslika = document.createElement("a");
+            aslika.setAttribute("href", slikeNature[natureAlt.length-j-2]);
+            aslika.setAttribute("data-lightbox", "slika");
+
             var slikuUbaci5 = document.createElement("img");
             slikuUbaci5.classList.add("img-fluid", "pb-2");
             slikuUbaci5.src = slikeNature[slikeNature.length-j-2];
             slikuUbaci5.setAttribute("alt", natureAlt[natureAlt.length-j-2]);
-            kolona5.appendChild(slikuUbaci5);
+            aslika.appendChild(slikuUbaci5);
+            kolona5.appendChild(aslika);
         }
         if(j==2){
             for(let k=0; k < 2; k++){
+                var aslika = document.createElement("a");
+                aslika.setAttribute("href", slikeNature[natureAlt.length-j+k]);
+                aslika.setAttribute("data-lightbox", "slika");
+
                 var slikuUbaci5 = document.createElement("img");
                 slikuUbaci5.classList.add("img-fluid", "pb-2");
                 slikuUbaci5.src = slikeNature[slikeNature.length-j+k];
                 slikuUbaci5.setAttribute("alt", natureAlt[natureAlt.length-j+k]);
-                kolona5.appendChild(slikuUbaci5);
+                aslika.appendChild(slikuUbaci5);
+                kolona5.appendChild(aslika);
             }
         }
         slikeSadrzaj5.appendChild(kolona5);
@@ -531,27 +616,43 @@ for(let i = 0; i < slikePeople.length; i++){
         kolona6.classList.add("col");
         if(j==0){
             for(let k=0; k < 3; k++){
+                var aslika = document.createElement("a");
+                aslika.setAttribute("href", slikePeople[j+k]);
+                aslika.setAttribute("data-lightbox", "slika");
+
                 var slikuUbaci6 = document.createElement("img");
                 slikuUbaci6.classList.add("img-fluid", "pb-2");
                 slikuUbaci6.src = slikePeople[j+k];
                 slikuUbaci6.setAttribute("alt", peopleAlt[j+k]);
-                kolona6.appendChild(slikuUbaci6);
+                aslika.appendChild(slikuUbaci6);
+                kolona6.appendChild(aslika);
             }
         }
         if(j==1){
+            var aslika = document.createElement("a");
+            aslika.setAttribute("href", slikePeople[slikePeople.length-j-2]);
+            aslika.setAttribute("data-lightbox", "slika");
+
             var slikuUbaci6 = document.createElement("img");
             slikuUbaci6.classList.add("img-fluid", "pb-2");
             slikuUbaci6.src = slikePeople[slikePeople.length-j-2];
             slikuUbaci6.setAttribute("alt", peopleAlt[peopleAlt.length-j-2]);
-            kolona6.appendChild(slikuUbaci6);
+            aslika.appendChild(slikuUbaci6);
+            kolona6.appendChild(aslika);
         }
         if(j==2){
             for(let k=0; k < 2; k++){
+                var aslika = document.createElement("a");
+                aslika.setAttribute("href", slikePeople[slikePeople.length-j+k]);
+                aslika.setAttribute("data-lightbox", "slika");
+
                 var slikuUbaci6 = document.createElement("img");
                 slikuUbaci6.classList.add("img-fluid", "pb-2");
                 slikuUbaci6.src = slikePeople[slikePeople.length-j+k];
                 slikuUbaci6.setAttribute("alt", peopleAlt[peopleAlt.length-j+k]);
                 kolona6.appendChild(slikuUbaci6);
+                aslika.appendChild(slikuUbaci6);
+                kolona6.appendChild(aslika);
             }
         }
         slikeSadrzaj6.appendChild(kolona6);
