@@ -28,8 +28,6 @@
     }
 }
 @keyframes flyRight{
-    //0% {opacity:0;}
-    //100% {opacity:1;}
     0% { 
     transform: translateX(200%); 		
     }
@@ -134,7 +132,6 @@ section{
     border: 15px double #3d3a3d;
     height: 600px;
 }
-
 .slikaHover img{
     width: 100%;
 
@@ -146,27 +143,22 @@ section{
     width: 100%;
     height: 100%;
 }
-
 .slikaHover .box:nth-child(1) {
     -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
             clip-path: polygon(0 0, 0% 100%, 100% 0);
     transition: clip-path 0.5s ease;
-}
-  
+}  
 .slikaHover .box:nth-child(2) {
     z-index: 2;
     -webkit-clip-path: polygon(100% 100%, 0% 100%, 100% 0);
             clip-path: polygon(100% 100%, 0% 100%, 100% 0);
     transition: clip-path 0.5s ease;
 }
-
-
 .slikaHover .box:nth-child(1):hover, .box:nth-child(2):hover {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     
-}
-  
+}  
 .slikaHover .box:nth-child(1):hover ~ .box:nth-child(2) {
     -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
             clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
@@ -259,7 +251,7 @@ section{
         text-shadow: 1px 1px 1px white;
     }
     .aktivan{
-        border: 2px solid rgb(122, 122, 122)!important;
+        border: 2px solid #7a7a7a!important;
     }
  
 }
@@ -360,10 +352,7 @@ section{
     }
 }
 
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
+
 
 #prev, #next{
     cursor: pointer;

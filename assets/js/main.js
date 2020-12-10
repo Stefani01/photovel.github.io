@@ -11,23 +11,12 @@ window.addEventListener("scroll", function(){
 var nazivMeni = new Array("About", "Services", "Team", "Gallery", "Contact");
 var hrefMeni = new Array("#about", "#services","#team", "#gallery", "#contact");
 
-
-                /* LOGO */
-
-var logoIspis = document.createElement("a");
-logoIspis.setAttribute("class", "navbar-brand");
-logoIspis.setAttribute("href", "index.html");
-var sadrzajLogoIkonica = `<img src="https://img.icons8.com/ios-filled/40/000000/compact-camera.png"/>`;
-logoIspis.innerHTML = sadrzajLogoIkonica;
-document.querySelector("#logo").appendChild(logoIspis);
-
                 /* MENI */
 
 var ulMeni = document.querySelector("#ulMeni");
 for(let i=0; i<nazivMeni.length; i++){
     var liMeni = document.createElement("li");
-    liMeni.setAttribute("class", "nav-item");
-    liMeni.setAttribute("class", "list-inline-item");
+    liMeni.classList.add("nav-item","list-inline-item");
     var aMeni = document.createElement("a");
     aMeni.setAttribute("class", "nav-link");
     aMeni.setAttribute("href", hrefMeni[i]);
@@ -57,15 +46,12 @@ document.querySelector("#meniHamburger").appendChild(ulHamburger);
                 /* DINAMICKI ISPIS NASLOVA */
 
 var naslovi = document.querySelectorAll(".naslovIspis");
-
 function ispisKlasaNaslova(){
     h1Tag.classList.add("text-uppercase", "text-center", "display-4");
 }
-
 function hrTagKlase(){
     hrTag.classList.add("mx-auto", "borderNaslov");
 }
-
 for(let i=0; i < naslovi.length; i++){
     var h1Tag = document.createElement("h1");
     h1Tag.setAttribute("href", hrefMeni[i]);
@@ -166,6 +152,8 @@ strelicaDesno.innerHTML =`
 <img src="https://img.icons8.com/nolan/64/expand-arrow.png"/>
 `;
 deo_strane_services.appendChild(strelicaDesno);
+
+
 /* DINAMICKI ISPIS TEAM */
 
 var imgTimSrc = new Array("assets/img/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg" , "assets/img/almos-bechtold-3402kvtHhOo-unsplash.jpg", "assets/img/austin-wade-X6Uj51n5CE8-unsplash.jpg");
@@ -196,24 +184,6 @@ for(let i=0; i < imgTimSrc.length; i++){
     divBodyTim.appendChild(cardTitleTim);
     divCardTim.appendChild(divBodyTim);
     timDeoStrane.appendChild(divCardTim);
-}
-
-/* DINAMICKI ISPIS P TAGOVA */
-
-var pTagovi = new Array();
-pTagovi[0] = "You need professional photography? You are in the right place!";
-pTagovi[1] = `PHOTOVEL company exists since 2000. All photograps are taken by
-professional artists and photographers who have years of professional 
-experience as well as excellent knowledge of post-production programs 
-guarantee that photography will be at the highest level.
-`;
-pTagovi[2] = `What sets PHOTOVEL from others is good portfolio and quality, which shows the wide range of services we provide.
-Taking photos of the most important moments of your life is what we do best.`
-
-for(let i = 0; i < 3; i++){
-    var pTag = document.createElement("p");
-    pTag.textContent = pTagovi[i];
-    document.querySelector("#textAbout").appendChild(pTag);
 }
 
 
@@ -775,7 +745,7 @@ document.querySelector("#btnSend").addEventListener("click", function(){
 
     var regIme = /^[A-Z][a-z]{1,10}(\s[A-Z][a-z]{2,10})*$/
     var regPrezime = /^[A-Z][a-z]{1,15}(\s[A-Z][a-z]{1,15})*$/
-    var regEmail = /^([a-z]{3,15})([\._-]?[a-z]{3,20}([\d]{1,3}))*@([a-z]{3,20})(\.[a-z]{2,3})+$/
+    var regEmail = /^([a-z]{3,15})(([\.]?[-]?[_]?[a-z]{3,20})*([\d]{1,3})*)@([a-z]{3,20})(\.[a-z]{2,3})+$/
     /*
     +XXX XXX XXXXXXX
     +XXX XXX XXX-XXXX
@@ -784,7 +754,7 @@ document.querySelector("#btnSend").addEventListener("click", function(){
     XXX XXX-XXXX
     XXX XXX XXXX
     */
-    var regBrTelefona = /^([+][(]?[0-9]{1,4}[)]?\s)?[0-9]{2,3}[\s-]?[0-9]{3}[-\s]{0,1}[0-9]{4}$/
+    var regBrTelefona = /^([+][(]?[0-9]{1,4}[)]?[\s]?)?[0-9]{2,3}[\s-]?[0-9]{3}[-\s]{0,1}[0-9]{4}$/
     var regPorukaPolje = /[^\s]/
     
     if(!regIme.test(ime.value)){
@@ -866,3 +836,4 @@ function prikaziSlajd(x){
     }
     slajder[slideBroj-1].style.display = "block";
 }
+

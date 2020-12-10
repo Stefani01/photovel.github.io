@@ -2,7 +2,6 @@
 $(document).ready(function(){
 
     /* HAMBURGER */
-
     $("#hamburger img").click(function(){
        $("#meniHamburger").find("ul").slideToggle(1200);
        var linkoviAnimacija = $("#meniHamburger ul li a");
