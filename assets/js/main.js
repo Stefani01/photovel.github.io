@@ -664,7 +664,7 @@ for(let i=0; i < (socMrezeIkonice.length - 2); i++){
     liSocInfo.classList.add("list-group-item");
 
     var aSocInfo = document.createElement("a");
-    aSocInfo.src = socMrezeLink[i];
+    aSocInfo.href = socMrezeLink[i];
     aSocInfo.innerHTML = socMrezeIkonice[i];
 
     liSocInfo.appendChild(aSocInfo);
