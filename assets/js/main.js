@@ -194,24 +194,31 @@ var liNizGalerija = new Array("Celebration", "City", "Family", "Food", "Interior
 var liNizKlasaBoja = new Array("primary", "secondary", "success", "danger", "warning", "info", "dark");
 
 var slikeCelebration = new Array("assets/img/celebration/stephen-leonardi-dYgv-1JnPTA-unsplash.jpg","assets/img/celebration/juan-encalada-x-otqcCinQk-unsplash.jpg","assets/img/celebration/nick-fewings-kmLUcvhqhSo-unsplash.jpg","assets/img/celebration/jed-villejo-4SByp8kIoOE-unsplash.jpg");
+var celebrationVelike = new Array("assets/img/celebrationVelike/stephen-leonardi-dYgv-1JnPTA-unsplash.jpg","assets/img/celebrationVelike/juan-encalada-x-otqcCinQk-unsplash (1).jpg","assets/img/celebrationVelike/nick-fewings-kmLUcvhqhSo-unsplash (1).jpg","assets/img/celebrationVelike/jed-villejo-4SByp8kIoOE-unsplash.jpg");
 var celebrationAlt = new Array("wedding day", "picture of baby", "birthday", "party");
 
 var slikeCity = new Array("assets/img/city/pexels-pixabay-356830.jpg","assets/img/city/pexels-paweł-l-1121782.jpg","assets/img/city/pexels-tatiana-fet-1105766.jpg","assets/img/city/pexels-adrianna-calvo-17682.jpg");
+var cityVelike = new Array("assets/img/cityVelike/pexels-pixabay-356830 (1).jpg","assets/img/cityVelike/pexels-paweł-l-1121782 (1).jpg","assets/img/cityVelike/pexels-tatiana-fet-1105766 (1).jpg","assets/img/cityVelike/pexels-adrianna-calvo-17682 (1).jpg");
 var cityAlt = new Array("city on sunset", "city in the reflection", "black and white photo of city", "city at night");
 
 var slikeFamily = new Array("assets/img/family/pexels-andreza-vasconcelos-3330714.jpg","assets/img/family/pexels-andreas-wohlfahrt-2456327.jpg","assets/img/family/pexels-singkham-1116050.jpg","assets/img/family/pexels-daria-obymaha-1683975.jpg","assets/img/family/jessica-rockowitz-6c4Uhhe68yQ-unsplash.jpg","assets/img/family/liv-bruce-odIhQypCuUk-unsplash.jpg");
+var familyVelike = new Array("assets/img/familyVelike/pexels-andreza-vasconcelos-3330714.jpg","assets/img/familyVelike/pexels-andreas-wohlfahrt-2456327 (1).jpg","assets/img/familyVelike/pexels-singkham-1116050 (1).jpg","assets/img/familyVelike/pexels-daria-obymaha-1683975 (1).jpg","assets/img/familyVelike/jessica-rockowitz-6c4Uhhe68yQ-unsplash.jpg","assets/img/familyVelike/liv-bruce-odIhQypCuUk-unsplash (1).jpg");
 var familyAlt = new Array("black and white photo of family", "photo of family", "happy kid", "mother with dother", "family", "parents and child hand");
 
 var slikeFood = new Array("assets/img/food/jill-heyer-toxlLueLNDs-unsplash.jpg","assets/img/food/joseph-gonzalez-fdlZBWIP0aM-unsplash.jpg","assets/img/food/alex-munsell-Yr4n8O_3UPc-unsplash.jpg","assets/img/food/brooke-lark-W9OKrxBqiZA-unsplash.jpg");
+var foodVelike = new Array("assets/img/foodVelike/jill-heyer-toxlLueLNDs-unsplash.jpg","assets/img/foodVelike/joseph-gonzalez-fdlZBWIP0aM-unsplash.jpg","assets/img/foodVelike/alex-munsell-Yr4n8O_3UPc-unsplash (1).jpg","assets/img/foodVelike/brooke-lark-W9OKrxBqiZA-unsplash (1).jpg");
 var foodAlt = new Array("cake", "eggs on plate with salad", "meat with potato","oatmeal");
 
 var slikeInterior = new Array("assets/img/interior/pexels-jean-van-der-meulen-1457842.jpg","assets/img/interior/pexels-pixabay-279719 (1).jpg","assets/img/interior/pexels-tiff-ng-3700245.jpg");
+var interiorVelike = new Array("assets/img/interiorVelike/pexels-jean-van-der-meulen-1457842 (1).jpg","assets/img/interiorVelike/pexels-pixabay-279719 (2).jpg","assets/img/interiorVelike/pexels-tiff-ng-3700245 (1).jpg");
 var interiorAlt = new Array("living room", "grey living room", "room with plants");
 
 var slikeNature = new Array("assets/img/nature/pexels-johannes-rapprich-2283757.jpg","assets/img/nature/pexels-goran-vrakela-245121.jpg","assets/img/nature/pexels-tobias-bjørkli-2113566 (1).jpg","assets/img/nature/pexels-michael-block-3225517.jpg","assets/img/nature/pexels-alex-azabache-3757141.jpg","assets/img/nature/pexels-ruvim-miksanskiy-1438761.jpg");
+var natureVelike = new Array("assets/img/natureVelike/pexels-johannes-rapprich-2283757 (1).jpg","assets/img/natureVelike/pexels-goran-vrakela-245121 (1).jpg","assets/img/natureVelike/pexels-tobias-bjørkli-2113566-(2).jpg","assets/img/natureVelike/pexels-michael-block-3225517 (1).jpg","assets/img/natureVelike/pexels-alex-azabache-3757141 (1).jpg","assets/img/natureVelike/pexels-ruvim-miksanskiy-1438761 (1).jpg");
 var natureAlt = new Array("snow on mountain", "sea at night", "beautiful sky", "river", "man on the beach", "snow in forest");
 
 var slikePeople = new Array("assets/img/people/pexels-nappy-935985.jpg","assets/img/people/pexels-pixabay-458766.jpg","assets/img/people/pexels-dazzle-jam-2710063.jpg","assets/img/people/pexels-tuấn-kiệt-jr-1382731.jpg","assets/img/people/pexels-dazzle-jam-2689401.jpg","assets/img/people/pexels-kourosh-qaffari-1921168.jpg");
+var peopleVelike = new Array("assets/img/peopleVelike/pexels-nappy-935985 (1).jpg","assets/img/peopleVelike/pexels-pixabay-458766 (1).jpg","assets/img/peopleVelike/pexels-dazzle-jam-2710063 (1).jpg","assets/img/peopleVelike/pexels-tuấn-kiệt-jr-1382731 (1).jpg","assets/img/peopleVelike/pexels-dazzle-jam-2689401 (1).jpg","assets/img/peopleVelike/pexels-kourosh-qaffari-1921168 (1).jpg");
 var peopleAlt = new Array("woman with bracelets", "phoot of woman", "woman in blue water", "woman with hat", "woman in pink water", "woman in forest");
 
 var ulGalerija = document.createElement("ul");
@@ -243,7 +250,7 @@ for(let i = 0; i < slikeCelebration.length; i++){
         
         if(j==0){
             var aslika = document.createElement("a");
-            aslika.setAttribute("href", slikeCelebration[j]);
+            aslika.setAttribute("href", celebrationVelike[j]);
             aslika.setAttribute("data-lightbox", "slika");
 
             var slikuUbaci = document.createElement("img");
@@ -258,7 +265,7 @@ for(let i = 0; i < slikeCelebration.length; i++){
         if(j==1){
             for(let k=0; k<2; k++){
                 var aslika = document.createElement("a");
-                aslika.setAttribute("href", slikeCelebration[k+1]);
+                aslika.setAttribute("href", celebrationVelike[k+1]);
                 aslika.setAttribute("data-lightbox", "slika");
 
                 var slikuUbaci = document.createElement("img");
@@ -309,7 +316,7 @@ for(let i = 0; i < slikeCity.length; i++){
         
         for(let k = 0; k < 2; k++){
             var aslika = document.createElement("a");
-            aslika.setAttribute("href", slikeCity[k]);
+            aslika.setAttribute("href", cityVelike[k]);
             aslika.setAttribute("data-lightbox", "slika");
 
             var slikuUbaci1 = document.createElement("img");
@@ -317,14 +324,14 @@ for(let i = 0; i < slikeCity.length; i++){
             slikuUbaci1.setAttribute("alt", cityAlt[k]);
             if(j==1){
                 var aslika = document.createElement("a");
-                aslika.setAttribute("href", slikeCity[k+j+1]);
+                aslika.setAttribute("href", cityVelike[k+j+1]);
                 aslika.setAttribute("data-lightbox", "slika");
                 slikuUbaci1.src = slikeCity[k+j+1];
                 slikuUbaci1.setAttribute("alt", cityAlt[k+j+1]);
             }
             else{
                 var aslika = document.createElement("a");
-                aslika.setAttribute("href", slikeCity[k+j]);
+                aslika.setAttribute("href", cityVelike[k+j]);
                 aslika.setAttribute("data-lightbox", "slika");
                 slikuUbaci1.src = slikeCity[k+j];
                 slikuUbaci1.setAttribute("alt", cityAlt[k+j]);
@@ -355,7 +362,7 @@ for(let i = 0; i < slikeFamily.length; i++){
         kolona2.classList.add("col");
         if(j==0){
             var aslika = document.createElement("a");
-            aslika.setAttribute("href", slikeFamily[j]);
+            aslika.setAttribute("href", familyVelike[j]);
             aslika.setAttribute("data-lightbox", "slika");
 
             var slikuUbaci2 = document.createElement("img");
@@ -369,7 +376,7 @@ for(let i = 0; i < slikeFamily.length; i++){
         if(j==1){
             for(let k=0; k<3; k++){
                 var aslika = document.createElement("a");
-                aslika.setAttribute("href", slikeFamily[k+j]);
+                aslika.setAttribute("href", familyVelike[k+j]);
                 aslika.setAttribute("data-lightbox", "slika");
 
                 var slikuUbaci2 = document.createElement("img");
@@ -383,7 +390,7 @@ for(let i = 0; i < slikeFamily.length; i++){
         if(j==2){
             for(let k=0; k < 2; k++){
                 var aslika = document.createElement("a");
-                aslika.setAttribute("href", slikeFamily[slikeFamily.length-j+k]);
+                aslika.setAttribute("href", familyVelike[familyVelike.length-j+k]);
                 aslika.setAttribute("data-lightbox", "slika");
 
                 var slikuUbaci2 = document.createElement("img");
@@ -417,7 +424,7 @@ for(let i = 0; i < slikeFamily.length; i++){
         kolona3.classList.add("col");
         if(j==0){
             var aslika = document.createElement("a");
-            aslika.setAttribute("href", slikeFood[j]);
+            aslika.setAttribute("href", foodVelike[j]);
             aslika.setAttribute("data-lightbox", "slika");
 
             var slikuUbaci3 = document.createElement("img");
@@ -430,7 +437,7 @@ for(let i = 0; i < slikeFamily.length; i++){
         }
         if(j==1){
             var aslika = document.createElement("a");
-            aslika.setAttribute("href", slikeFood[j]);
+            aslika.setAttribute("href", foodVelike[j]);
             aslika.setAttribute("data-lightbox", "slika");
 
             var slikuUbaci3 = document.createElement("img");
@@ -443,7 +450,7 @@ for(let i = 0; i < slikeFamily.length; i++){
         if(j==2){
             for(let k=0; k < 2; k++){
                 var aslika = document.createElement("a");
-                aslika.setAttribute("href", slikeFood[j+k]);
+                aslika.setAttribute("href", foodVelike[j+k]);
                 aslika.setAttribute("data-lightbox", "slika");
 
                 var slikuUbaci3 = document.createElement("img");
@@ -479,7 +486,7 @@ for(let i = 0; i < slikeInterior.length; i++){
         if(j==0){
             for(let k=0; k < 2; k++){
                 var aslika = document.createElement("a");
-                aslika.setAttribute("href", slikeInterior[j+k]);
+                aslika.setAttribute("href", interiorVelike[j+k]);
                 aslika.setAttribute("data-lightbox", "slika");
 
                 var slikuUbaci4 = document.createElement("img");
@@ -492,7 +499,7 @@ for(let i = 0; i < slikeInterior.length; i++){
         }
         else{
             var aslika = document.createElement("a");
-            aslika.setAttribute("href", slikeInterior[j+1]);
+            aslika.setAttribute("href", interiorVelike[j+1]);
             aslika.setAttribute("data-lightbox", "slika");
 
             var slikuUbaci4 = document.createElement("img");
@@ -526,7 +533,7 @@ for(let i = 0; i < slikeNature.length; i++){
         if(j==0){
             for(let k=0; k < 3; k++){
                 var aslika = document.createElement("a");
-                aslika.setAttribute("href", slikeNature[j+k]);
+                aslika.setAttribute("href", natureVelike[j+k]);
                 aslika.setAttribute("data-lightbox", "slika");
 
                 var slikuUbaci5 = document.createElement("img");
@@ -539,7 +546,7 @@ for(let i = 0; i < slikeNature.length; i++){
         }
         if(j==1){
             var aslika = document.createElement("a");
-            aslika.setAttribute("href", slikeNature[natureAlt.length-j-2]);
+            aslika.setAttribute("href", natureVelike[natureVelike.length-j-2]);
             aslika.setAttribute("data-lightbox", "slika");
 
             var slikuUbaci5 = document.createElement("img");
@@ -552,7 +559,7 @@ for(let i = 0; i < slikeNature.length; i++){
         if(j==2){
             for(let k=0; k < 2; k++){
                 var aslika = document.createElement("a");
-                aslika.setAttribute("href", slikeNature[natureAlt.length-j+k]);
+                aslika.setAttribute("href", natureVelike[natureVelike.length-j+k]);
                 aslika.setAttribute("data-lightbox", "slika");
 
                 var slikuUbaci5 = document.createElement("img");
@@ -587,7 +594,7 @@ for(let i = 0; i < slikePeople.length; i++){
         if(j==0){
             for(let k=0; k < 3; k++){
                 var aslika = document.createElement("a");
-                aslika.setAttribute("href", slikePeople[j+k]);
+                aslika.setAttribute("href", peopleVelike[j+k]);
                 aslika.setAttribute("data-lightbox", "slika");
 
                 var slikuUbaci6 = document.createElement("img");
@@ -600,7 +607,7 @@ for(let i = 0; i < slikePeople.length; i++){
         }
         if(j==1){
             var aslika = document.createElement("a");
-            aslika.setAttribute("href", slikePeople[slikePeople.length-j-2]);
+            aslika.setAttribute("href", peopleVelike[peopleVelike.length-j-2]);
             aslika.setAttribute("data-lightbox", "slika");
 
             var slikuUbaci6 = document.createElement("img");
@@ -613,7 +620,7 @@ for(let i = 0; i < slikePeople.length; i++){
         if(j==2){
             for(let k=0; k < 2; k++){
                 var aslika = document.createElement("a");
-                aslika.setAttribute("href", slikePeople[slikePeople.length-j+k]);
+                aslika.setAttribute("href", peopleVelike[peopleVelike.length-j+k]);
                 aslika.setAttribute("data-lightbox", "slika");
 
                 var slikuUbaci6 = document.createElement("img");
@@ -795,7 +802,7 @@ document.querySelector("#btnSend").addEventListener("click", function(){
     
     if(!regPorukaPolje.test(porukaPolje.value)){
         porukaPolje.nextElementSibling.classList.add("greska");
-        porukaPolje.nextElementSibling.innerHTML = "- You must write a message";
+        porukaPolje.nextElementSibling.innerHTML = "- You need to write a message";
     }
     else{
         porukaPolje.nextElementSibling.classList.add("ispravno");

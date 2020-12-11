@@ -69,7 +69,6 @@ body{
 
 .margina{
     margin-top: 100px;
-    //margin-bottom: 100px;;
 }
 section{
     height: 100vh;
@@ -164,7 +163,6 @@ section{
             clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
 }
 
-
 .borderNaslov {
     width: 25%;
     background: -webkit-gradient(linear, left top, right top, from(white), color-stop(#77d7e6), color-stop(#de34eb), to(#3d3a3d));
@@ -199,24 +197,14 @@ section{
     z-index: 5;
     right: 1.5%;
     top: 35%;
-
     #ulSocMreze ul li{
         background-color: #f7f7f7 !important;
     }
-
     .list-group-item{
         padding: .25rem 0.5rem !important;
     }
- 
 }
 
-/*
-#podnaslov{
-    h1{
-        transform: rotate(-90deg);
-    }
-}
-*/
 
 #kamere, #tim{
     .card-body{
@@ -231,7 +219,6 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    //flex-direction: column;
 }
 
 .teamMember{
@@ -333,7 +320,7 @@ section{
 #sliderServices{
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    //justify-content: space-around;
     align-items: center;
 }
 
@@ -346,13 +333,16 @@ section{
     animation: fade 1.5s ease-in-out;
 }
 
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
 #prev, #next{
     img{
         transform: rotate(-90deg);
     }
 }
-
-
 
 #prev, #next{
     cursor: pointer;
